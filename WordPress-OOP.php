@@ -19,9 +19,17 @@ if ( ! defined( 'WPINC' ) ) {
 require 'autoload.php';
 
 use WordPressOOP\WordPressOOP;
+use WordPressOOP\Storage\Database;
 
 // Create main plugin instance, which will also serve as the service container.
 $wordPressOOP = new WordPressOOP;
+
+// Register database object in the service container.
+$wordPressOOP->db = function($wordPressOOP)
+{
+    global $wpdb;
+    return new Database($wpdb);
+};
 
 // Plugin life time hooks.
 register_activation_hook(__FILE__, array($wordPressOOP, 'activate'));

@@ -23,4 +23,9 @@ use WordPressOOP\WordPressOOP;
 // Create main plugin instance, which will also serve as the service container.
 $wordPressOOP = new WordPressOOP;
 
+// Plugin life time hooks.
+register_activation_hook(__FILE__, array($wordPressOOP, 'activate'));
+register_deactivation_hook(__FILE__, array($wordPressOOP, 'deactivate'));
+// register_uninstall_hook(__FILE__, array($wordPressOOP, 'uninstall'));
+
 ?>

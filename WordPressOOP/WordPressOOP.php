@@ -12,6 +12,36 @@ class WordPressOOP
     protected $services = array();
 
     /**
+     * Hook triggered when plugin is activated.
+     *
+     * @return void
+     */
+    public function activate()
+    {
+        // ...
+    }
+
+    /**
+     * Hook triggered when plugin is deactivated.
+     *
+     * @return void
+     */
+    public function deactivate()
+    {
+        // ...
+    }
+
+    /**
+     * Hook triggered when plugin is uninstalled.
+     *
+     * @return void
+     */
+    public function uninstall()
+    {
+        // Not working right now.
+    }
+
+    /**
      * Magic method for retrieving services from the container.
      *
      * @param string $service

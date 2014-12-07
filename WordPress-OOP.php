@@ -10,4 +10,12 @@
  * License: GNU GENERAL PUBLIC LICENSE
  */
 
+// If this file is called directly, abort.
+if ( ! defined( 'WPINC' ) ) {
+    die;
+}
+
+// PSR-4 autoloading: http://www.php-fig.org/psr/psr-4/
+require 'autoload.php';
+
 ?>

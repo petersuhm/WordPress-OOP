@@ -18,4 +18,9 @@ if ( ! defined( 'WPINC' ) ) {
 // PSR-4 autoloading: http://www.php-fig.org/psr/psr-4/
 require 'autoload.php';
 
+use WordPressOOP\WordPressOOP;
+
+// Create main plugin instance, which will also serve as the service container.
+$wordPressOOP = new WordPressOOP;
+
 ?>

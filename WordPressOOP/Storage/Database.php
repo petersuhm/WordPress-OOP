@@ -23,7 +23,7 @@ class Database
     /**
      * Constructor requires wpdb object.
      *
-     * @param \wpdb $db
+     * @param \wpdb $wpdb
      * @return void
      */
     public function __construct(wpdb $wpdb)
